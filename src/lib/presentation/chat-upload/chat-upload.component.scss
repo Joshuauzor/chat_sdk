@@ -1,0 +1,50 @@
+.std-chat-controls-input-group {
+  height: 100%;
+  padding: 0 20px;
+  border-radius: 20px;
+  border: 1px solid #E0E0E0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 40px;;
+  .std-chat-controls-upload {
+    background: none;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+      outline: none;
+    }
+  }
+  .std-chat-controls-img-preview {
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    img {
+      max-height: 40px;
+    }
+    span {
+      font-weight: bold;
+      font-size: 1.3em;
+      padding-left: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+  input {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

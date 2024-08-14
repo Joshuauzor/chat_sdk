@@ -1,0 +1,139 @@
+.std-chat-msgs-container {
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  // grid-template-rows: 8fr 1fr;
+}
+.std-chat-msgs-header {
+  height: 69px;
+  box-shadow: 0px 2px 6px rgb(14 18 32 / 10%);
+  z-index: 1;
+  padding: 16px 24px;
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  grid-template-columns: 32px auto;
+  grid-gap: 16px;
+}
+.std-chat-msgs-avatar {
+  max-height: 100%;
+}
+.std-chat-msgs {
+  height: 100%;
+  padding: 0 24px;
+  overflow: hidden;
+  &:hover {
+    overflow: scroll;
+    overflow-y: overlay;
+  }
+}
+.std-chat-msg-container {
+  margin: 8px;
+}
+.std-chat-date-title {
+  font-weight: 500;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  color: #a8a8a8;
+}
+.std-chat-msg-content {
+  min-width: 100px;
+  max-width: 50%;
+}
+.std-chat-msg-text {
+  background: #ffffff;
+  box-shadow: 0px 2px 6px rgba(14, 18, 32, 0.1);
+  border-radius: 0px 8px 8px 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-size: 1.35em;
+  width: fit-content;
+  max-width: 100%;
+  word-break: break-word;
+  p {
+    margin-bottom: 0;
+  }
+  .std-chat-msg-text-default {
+    color: #74747485;
+  }
+}
+.std-chat-msg-time {
+  font-size: 1em;
+  margin: 0px 8px;
+}
+.owner {
+  display: grid;
+  justify-content: flex-end;
+  align-items: end;
+  grid-template-areas:
+    "h1"
+    "div";
+  grid-template-columns: 100%;
+  .std-chat-msg-content {
+    max-width: initial;
+  }
+  .std-chat-msg-text {
+    background: #3470e7;
+    color: #fff;
+    border-radius: 8px 8px 0px 8px;
+    text-align: end;
+    width: fit-content;
+    margin: auto 0 auto auto;
+    max-width: 50%;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+    .std-chat-msg-text-default {
+      color: #fafafac7;
+    }
+  }
+  .std-chat-msg-time {
+    margin: 8px 0 auto auto;
+    width: fit-content;
+  }
+}
+.std-chat-controls {
+  height: 70px;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  grid-gap: 16px;
+  padding: 12px 24px;
+  align-self: end;
+  .std-chat-controls-send {
+    background: linear-gradient(165.52deg, #3470e7 10.12%, #5dc6eb 89.59%);
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// Change scrollbar
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
+  z-index: 10;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c6ca;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9a9b9e;
+}
